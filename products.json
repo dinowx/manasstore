@@ -13,10 +13,7 @@
     "imagem_principal": "produtos/regatas/neymar.jpg",
     "descricao": "Este tênis streetwear combina estilo e conforto para o seu dia a dia. Com design moderno e materiais de alta qualidade, é perfeito para quem busca um visual urbano sem abrir mão da performance. Disponível em diversas cores e tamanhos.",
     "imagens_galeria": [
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d2a",
-      "https://images.unsplash.com/photo-1552346154-21d32810cdfd",
-      "https://images.unsplash.com/photo-1515955659234-256797efb4c1"
+      "produtos/regatas/neymar.jpg"
     ],
     "opcoes": {
       "tamanhos": ["38", "39", "40", "41", "42"]
@@ -220,4 +217,5 @@
     ],
     "opcoes": {}
   }
+
 ]
