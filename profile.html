@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil - Manas</title>
+  <link href="./output.css" rel="stylesheet">
+
+  <style>
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #cart-counter.hidden {
+      display: none;
+    }
+    #cart-counter {
+      min-width: 1.25rem; /* h-5 */
+      height: 1.25rem; /* w-5 */
+      font-size: 0.75rem; /* text-xs */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+
+      <a href="index.html"><img src="img/logomanas.png" class="h-14 w-full"></a>
+
+      <!-- Desktop Menu -->
+      <nav id="main-nav" class="hidden md:flex md:items-center gap-6 font-medium w-full md:w-auto bg-white md:bg-transparent p-8 md:p-0 shadow-md md:shadow-none md:relative absolute top-full left-0">
+        <!-- Menu items will be inserted here by JS -->
+      </nav>
+
+      <div class="flex items-center gap-4 text-xl">
+        <button id="open-search-btn" class="hover:text-indigo-600 cursor-pointer" aria-label="Buscar produtos"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></button>
+        <a href="profile.html" class="hover:text-indigo-600 cursor-pointer" aria-label="Minha conta"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg></a>
+        <a href="cart.html" class="relative hover:text-indigo-600 cursor-pointer" aria-label="Carrinho de compras">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+          <span id="cart-counter" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full flex items-center justify-center hidden">0</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden cursor-pointer" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false">
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  <!-- Search Overlay -->
+  <div id="search-overlay" class="fixed inset-0 bg-black/50 z-50 hidden items-start md:items-center justify-center pt-20 md:pt-0">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md relative mx-4">
+      <button id="close-search-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 cursor-pointer" aria-label="Fechar busca">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 class="text-2xl font-bold mb-4">Buscar Produtos</h3>
+      <div class="flex">
+        <input type="text" id="search-input" placeholder="O que você procura?" class="flex-1 p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
+        <button id="search-submit-btn" class="bg-indigo-600 text-white px-6 py-3 rounded-r-lg hover:bg-indigo-700 transition-colors cursor-pointer">Buscar</button>
+      </div>
+    </div>
+  </div>
+  </header>
+  <!-- ORDERS SECTION -->
+  <main class="max-w-7xl mx-auto px-4 py-16 fade-in-section">
+    <h1 class="text-2xl md:text-3xl font-bold text-center mb-10">Meus Pedidos</h1>
+
+    <div id="orders-container" class="space-y-8">
+      <!-- Orders will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-16 fade-in-section">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="img/logomanas-branco.png" class="w-40">
+        <p>Universo Feminino</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-3">Categorias</h4>
+        <ul id="footer-categories" class="space-y-2">
+          <!-- Footer categories will be inserted here by JS -->
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-3">Suporte</h4>
+        <ul id="footer-support" class="space-y-2">
+          <!-- Footer support links will be inserted here by JS -->
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-3">Pagamentos</h4>
+        <p>Pix • Cartão • Dinheiro</p>
+      </div>
+    </div>
+    <div class="text-center mt-16 pt-10 border-t border-gray-800 text-sm">
+      © 2026 MaNas - Universo Feminino
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fixed bottom-4 right-4 z-20 flex flex-col gap-3">
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5541000000000?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida." target="_blank" class="bg-green-500 text-white h-14 w-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors cursor-pointer" aria-label="Contato via WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.89-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" class="bg-indigo-600 text-white h-14 w-14 rounded-full flex items-center justify-center shadow-lg hover:bg-indigo-700 transition-all cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const navMenu = document.getElementById('main-nav');
+    const openIcon = document.getElementById('menu-icon-open');
+    const closeIcon = document.getElementById('menu-icon-close');
+
+    if (menuButton && navMenu && openIcon && closeIcon) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    }
+
+    // Animate on Scroll
+    const sectionsToAnimate = document.querySelectorAll('.fade-in-section');
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    sectionsToAnimate.forEach(section => { observer.observe(section); });
+
+    // Update Cart Counter
+    const updateCartCounter = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const counter = document.getElementById('cart-counter');
+      if (totalItems > 0) {
+        counter.textContent = totalItems;
+        counter.classList.remove('hidden');
+      } else {
+        counter.classList.add('hidden');
+      }
+    };
+
+    // Load Site Data (Menu & Footer)
+    const loadSiteData = () => {
+      fetch('site-data.json')
+        .then(response => response.json())
+        .then(data => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+          // Populate Header Menu
+          const navMenu = document.getElementById('main-nav');
+          data.headerMenu.forEach(item => {
+          const isActive = item.href === currentPage;
+          const activeClasses = isActive ? 'border-b-2 border-indigo-600' : '';
+          navMenu.innerHTML += `<a href="${item.href}" class="block md:inline hover:text-indigo-600 transition-colors py-2 ${activeClasses}">${item.text}</a>`;
+          });
+
+          // Populate Footer Categories
+          const footerCategories = document.getElementById('footer-categories');
+          data.footer.categorias.forEach(item => {
+            footerCategories.innerHTML += `<li><a href="${item.href}" class="hover:text-white">${item.text}</a></li>`;
+          });
+
+          // Populate Footer Support
+          const footerSupport = document.getElementById('footer-support');
+          data.footer.suporte.forEach(item => {
+            footerSupport.innerHTML += `<li><a href="${item.href}" class="hover:text-white">${item.text}</a></li>`;
+          });
+        }).catch(error => console.error('Erro ao carregar dados do site:', error));
+    };
+
+    // Orders Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const ordersContainer = document.getElementById('orders-container');
+      const purchaseHistory = JSON.parse(localStorage.getItem('purchaseHistory')) || [];
+
+      if (purchaseHistory.length === 0) {
+        ordersContainer.innerHTML = `
+          <div class="text-center bg-white p-10 rounded-xl shadow">
+            <h2 class="text-2xl font-semibold mb-4">Você ainda não fez nenhum pedido</h2>
+            <p class="text-gray-600 mb-6">Explore nossos produtos e comece a comprar!</p>
+            <a href="index.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+              Ir para a loja
+            </a>
+          </div>`;
+        return;
+      }
+
+      // Sort orders from newest to oldest
+      purchaseHistory.sort((a, b) => b.id - a.id);
+
+      purchaseHistory.forEach(order => {
+        const orderCard = document.createElement('div');
+        orderCard.className = 'bg-white p-6 rounded-xl shadow';
+
+        let itemsHtml = '';
+        order.items.forEach(item => {
+          itemsHtml += `
+            <div class="flex items-center gap-4 py-2 border-b last:border-b-0">
+              <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
+              <div class="flex-grow">
+                <h4 class="font-semibold">${item.name}</h4>
+                <p class="text-sm text-gray-600">Qtd: ${item.quantity}</p>
+              </div>
+              <p class="font-semibold">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</p>
+            </div>
+          `;
+        });
+
+        orderCard.innerHTML = `
+          <div class="flex justify-between items-center border-b pb-4 mb-4">
+            <div>
+              <h3 class="font-bold text-lg">Pedido #${order.id}</h3>
+              <p class="text-sm text-gray-600">Realizado em: ${order.date}</p>
+            </div>
+            <div class="text-right">
+              <p class="font-bold text-lg">${order.total}</p>
+              <p class="text-sm text-gray-600">(${order.shippingMethod})</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            ${itemsHtml}
+          </div>
+        `;
+        ordersContainer.appendChild(orderCard);
+      });
+
+      loadSiteData();
+      updateCartCounter();
+    });
+
+    // Search Overlay Logic
+    const openSearchBtn = document.getElementById('open-search-btn');
+    const closeSearchBtn = document.getElementById('close-search-btn');
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = document.getElementById('search-input');
+    const searchSubmitBtn = document.getElementById('search-submit-btn');
+
+    const performSearch = () => {
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.href = `index.html?search=${encodeURIComponent(query)}`;
+      }
+    };
+
+    openSearchBtn.addEventListener('click', () => {
+      searchOverlay.classList.remove('hidden');
+      searchOverlay.classList.add('flex');
+      searchInput.focus();
+    });
+
+    closeSearchBtn.addEventListener('click', () => {
+      searchOverlay.classList.add('hidden');
+      searchOverlay.classList.remove('flex');
+    });
+
+    searchSubmitBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    // Back to top button logic
+    const backToTopButton = document.getElementById('back-to-top-btn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "headerMenu": [
+    { "text": "Roupas", "href": "roupas.html" },
+    { "text": "Perfumes", "href": "perfumes.html" },
+    { "text": "Semi-jóias", "href": "bijuterias.html" },
+    { "text": "Bonés", "href": "bones.html" },
+    { "text": "Ofertas", "href": "#" }
+  ],
+  "footer": {
+    "categorias": [
+      { "text": "Roupas", "href": "roupas.html" },
+      { "text": "Perfumes", "href": "perfumes.html" },
+      { "text": "Semi-jóias", "href": "bijuterias.html" },
+      { "text": "Bonés", "href": "bones.html" }
+    ],
+    "suporte": [
+      { "text": "Contato", "href": "#" },
+      { "text": "Trocas", "href": "#" },
+      { "text": "Entrega", "href": "#" }
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "nome": "Regata Neymar",
+    "categoria": "Roupas",
+    "subcategoria": "Roupa Masculina",
+    "preco": 99.90,
+    "promocao": {
+      "ativo": true,
+      "preco_promocional": 79.90
+    },
+    "estoque": 50,
+    "imagem_principal": "produtos/regatas/neymar.jpg",
+    "descricao": "Este tênis streetwear combina estilo e conforto para o seu dia a dia. Com design moderno e materiais de alta qualidade, é perfeito para quem busca um visual urbano sem abrir mão da performance. Disponível em diversas cores e tamanhos.",
+    "imagens_galeria": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d2a",
+      "https://images.unsplash.com/photo-1552346154-21d32810cdfd",
+      "https://images.unsplash.com/photo-1515955659234-256797efb4c1"
+    ],
+    "opcoes": {
+      "tamanhos": ["38", "39", "40", "41", "42"]
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Perfume Masculino Intenso",
+    "categoria": "Perfumes",
+    "preco": 129.90,
+    "promocao": {
+      "ativo": true,
+      "preco_promocional": 99.90
+    },
+    "estoque": 80,
+    "imagem_principal": "https://images.unsplash.com/photo-1596462502278-27bfdc403348",
+    "descricao": "Uma fragrância marcante e sofisticada para o homem moderno. Notas amadeiradas com um toque de especiarias, ideal para ocasiões especiais.",
+    "imagens_galeria": [
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348"
+    ],
+    "opcoes": {}
+  },
+  {
+    "id": 3,
+    "nome": "Colar Feminino Dourado",
+    "categoria": "Semi-jóias",
+    "preco": 59.90,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 120,
+    "imagem_principal": "https://images.unsplash.com/photo-1617038220382-20319-276d3cfab638",
+    "descricao": "Um colar delicado e elegante, banhado a ouro 18k. Perfeito para complementar qualquer look, do casual ao formal.",
+    "imagens_galeria": [
+      "https://images.unsplash.com/photo-1617038220382-20319-276d3cfab638"
+    ],
+    "opcoes": {}
+  },
+  {
+    "id": 4,
+    "nome": "Boné Street Aba Reta",
+    "categoria": "Bonés",
+    "preco": 79.90,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 200,
+    "imagem_principal": "produtos/bones/001.jpg",
+    "descricao": "Boné com design clássico de aba reta, ideal para um estilo urbano e despojado. Feito com material resistente e ajuste regulável.",
+    "imagens_galeria": [
+      "produtos/bones/001.jpg",
+      "produtos/bones/001.jpg",
+      "produtos/bones/001.jpg",
+      "produtos/bones/001.jpg"
+  
+      
+    ],
+    "opcoes": {}
+  },
+
+     {
+    "id": 5,
+    "nome": "Camiseta Casual Feminina",
+    "categoria": "Roupas",
+    "subcategoria": "Casual",
+    "preco": 89.90,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 150,
+    "imagem_principal": "https://images.unsplash.com/photo-1571902969976-599182963321",
+    "descricao": "Camiseta de algodão com caimento perfeito para o dia a dia. Conforto e estilo em uma única peça.",
+    "imagens_galeria": [
+      "https://images.unsplash.com/photo-1571902969976-599182963321",
+      "https://images.unsplash.com/photo-1571902969976-599182963321"
+    ],
+    "opcoes": {
+      "tamanhos": ["P", "M", "G", "GG"]
+    }
+  },
+     {
+    "id": 6,
+    "nome": "Pure Wonder – Bath & Body Works",
+    "categoria": "Perfumes",
+    "preco": 139,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 5,
+    "imagem_principal": "produtos/perfumes/002.jpg",
+    "descricao": "O Body Splash Bath & Body Works Pure Wonder foi desenvolvido para pessoas que buscam uma expressão olfativa delicada e sofisticada, com uma composição que combina notas elegantes de Rosé Gelado, Jasmim Estrelado e Âmbar Branco Quente.",
+    "imagens_galeria": [
+      "produtos/perfumes/002.jpg"
+     
+  
+      
+    ],
+    "opcoes": {}
+  },
+       {
+    "id": 7,
+    "nome": "BRINCO ARGOLA CRAVEJADO COM ZIRCÔNIAS",
+    "categoria": "Semi-jóias",
+    "preco": 139,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 5,
+    "imagem_principal": "produtos/joias/001/001.jpg",
+    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
+    "imagens_galeria": [
+      "produtos/joias/001/001.jpg"
+     
+  
+      
+    ],
+    "opcoes": {}
+  },
+         {
+    "id": 8,
+    "nome": "Boné Street New York Bege",
+    "categoria": "Bonés",
+    "preco": 79,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 5,
+    "imagem_principal": "produtos/bones/002.jpg",
+    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
+    "imagens_galeria": [
+      "produtos/bones/002.jpg"
+     
+  
+      
+    ],
+    "opcoes": {}
+  },
+         {
+    "id": 9,
+    "nome": "Boné Street New York Bege",
+    "categoria": "Bonés",
+    "preco": 79,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 5,
+    "imagem_principal": "produtos/bones/003.jpg",
+    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
+    "imagens_galeria": [
+      "produtos/bones/003.jpg"
+     
+  
+      
+    ],
+    "opcoes": {}
+  },
+         {
+    "id": 10,
+    "nome": "Boné Street New York Bege",
+    "categoria": "Bonés",
+    "preco": 79,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 5,
+    "imagem_principal": "produtos/bones/004.jpg",
+    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
+    "imagens_galeria": [
+      "produtos/bones/004.jpg"
+     
+  
+      
+    ],
+    "opcoes": {}
+  },
+         {
+    "id": 11,
+    "nome": "Boné Street New York Bege",
+    "categoria": "Bonés",
+    "preco": 79,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": null
+    },
+    "estoque": 5,
+    "imagem_principal": "produtos/bones/005.jpg",
+    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
+    "imagens_galeria": [
+      "produtos/bones/005.jpg"
+     
+  
+      
+    ],
+    "opcoes": {}
+  }
+]
