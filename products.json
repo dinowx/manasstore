@@ -223,7 +223,7 @@
     "categoria": "Semi-jóias",
     "preco": 39,
     "promocao": {
-      "ativo": false,
+      "ativo": true,
       "preco_promocional": 30
     },
     "estoque": 3,
