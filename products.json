@@ -216,6 +216,23 @@
       
     ],
     "opcoes": {}
+  },
+         {
+    "id": 12,
+    "nome": "Colar",
+    "categoria": "Semi-jóias",
+    "preco": 39,
+    "promocao": {
+      "ativo": false,
+      "preco_promocional": 30
+    },
+    "estoque": 3,
+    "imagem_principal": "produtos/bones/005.jpg",
+    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
+    "imagens_galeria": [
+      "produtos/bones/005.jpg"
+    ],
+    "opcoes": {}
   }
 
 ]
