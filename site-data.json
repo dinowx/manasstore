@@ -2,7 +2,7 @@
   "headerMenu": [
     { "text": "Roupas", "href": "roupas.html" },
     { "text": "Perfumes", "href": "perfumes.html" },
-    { "text": "Semi-jóias", "href": "bijuterias.html" },
+    { "text": "Semi-jóias", "href": "semi-joias.html" },
     { "text": "Bonés", "href": "bones.html" },
     { "text": "Ofertas", "href": "#" }
   ],
@@ -10,13 +10,13 @@
     "categorias": [
       { "text": "Roupas", "href": "roupas.html" },
       { "text": "Perfumes", "href": "perfumes.html" },
-      { "text": "Semi-jóias", "href": "bijuterias.html" },
+      { "text": "Semi-jóias", "href": "semi-joias.html" },
       { "text": "Bonés", "href": "bones.html" }
     ],
     "suporte": [
-      { "text": "Contato", "href": "#" },
-      { "text": "Trocas", "href": "#" },
-      { "text": "Entrega", "href": "#" }
+      { "text": "Contato", "href": "contato.html" },
+      { "text": "Trocas", "href": "trocas.html" },
+      { "text": "Entrega", "href": "entrega.html" }
     ]
   }
 }

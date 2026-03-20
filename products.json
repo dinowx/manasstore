@@ -13,7 +13,10 @@
     "imagem_principal": "produtos/regatas/neymar.jpg",
     "descricao": "Este tênis streetwear combina estilo e conforto para o seu dia a dia. Com design moderno e materiais de alta qualidade, é perfeito para quem busca um visual urbano sem abrir mão da performance. Disponível em diversas cores e tamanhos.",
     "imagens_galeria": [
-      "produtos/regatas/neymar.jpg"
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d2a",
+      "https://images.unsplash.com/photo-1552346154-21d32810cdfd",
+      "https://images.unsplash.com/photo-1515955659234-256797efb4c1"
     ],
     "opcoes": {
       "tamanhos": ["38", "39", "40", "41", "42"]
@@ -216,23 +219,5 @@
       
     ],
     "opcoes": {}
-  },
-         {
-    "id": 12,
-    "nome": "Colar",
-    "categoria": "Semi-jóias",
-    "preco": 39,
-    "promocao": {
-      "ativo": true,
-      "preco_promocional": 30
-    },
-    "estoque": 3,
-    "imagem_principal": "produtos/bones/005.jpg",
-    "descricao": "O Brinco Argola Cravejado com Zircônias da Confidence Semijoias é a peça ideal para quem busca refinamento e estilo em seu visual. Com design moderno e acabamento impecável, esse brinco é perfeito para ocasiões especiais.",
-    "imagens_galeria": [
-      "produtos/bones/005.jpg"
-    ],
-    "opcoes": {}
   }
-
 ]
